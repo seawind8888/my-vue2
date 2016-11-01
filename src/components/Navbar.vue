@@ -31,7 +31,6 @@
     left: 0;
     right: 0;
     color: #ffffff;
-
   }
   .main img{
     height: 25px;
