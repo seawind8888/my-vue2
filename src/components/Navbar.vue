@@ -42,8 +42,6 @@
     font-size: 16px;
     display: inline-block;
     left: 10px;
-
-
   }
   .item_container{
     box-shadow: 1px 0 1px #363636;
