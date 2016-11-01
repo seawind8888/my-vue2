@@ -40,7 +40,6 @@
     position: relative;
     bottom: 5px;
     font-size: 16px;
-    flex: 1;
     display: inline-block;
     left: 10px;
 
