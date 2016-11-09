@@ -1,22 +1,21 @@
 <template>
   <div id="demo">
     <h1>{{msg}}</h1>
-    <test :data_props="123321"></test>
   </div>
 </template>
 
 <script>
-  import test from '../components/test'
   export default {
+    props: {
+      data_props: {}
+    },
     data () {
       return {
-        msg: 'Hello index!'
+        msg: this.data_props
       }
     },
-    components: {
-      test
-    },
     ready () {
+      console.log(this.$el.offsetHeight)
     }
   }
 </script>
