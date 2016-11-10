@@ -1,19 +1,21 @@
 <template>
-  <div class="hello">
-    <listItem v-for="x in page"></listItem>
+  <div id="demo">
+    <h1>{{msg}}</h1>
   </div>
 </template>
 
 <script>
-  import listItem from '../components/listItem'
   export default {
+    props: {
+      data_props: {}
+    },
     data () {
       return {
-        page: 3
+        msg: this.data_props
       }
     },
-    components: {
-      listItem
+    ready () {
+      console.log(this.$el.offsetHeight)
     }
   }
 </script>

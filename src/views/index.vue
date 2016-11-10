@@ -1,12 +1,15 @@
 <template>
   <div id="demo">
-    <h1>{{msg}}</h1>
-    <test :data_props="123321"></test>
+    <h1 v-html="msg"></h1>
+    <test v-ref:child :data_props="123321">
+      <testA :data_props="323123"></testA>
+    </test>
   </div>
 </template>
 
 <script>
   import test from '../components/test'
+  import testA from '../components/testA'
   export default {
     data () {
       return {
@@ -14,9 +17,16 @@
       }
     },
     components: {
-      test
+      test,
+      testA
     },
     ready () {
+      this.tests()
+    },
+    methods: {
+      tests: function () {
+        console.log(this.$refs.child)
+      }
     }
   }
 </script>
