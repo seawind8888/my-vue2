@@ -1,29 +1,25 @@
 <template>
   <div id="app">
-    <Navbar></Navbar>
-    <Sidebar></Sidebar>
     <div class="wrap">
       <router-view></router-view>
     </div>
+    <Tabbar></Tabbar>
   </div>
 </template>
 
 <style lang="less">
-
   body {
     background-color: #fbf9fe;
   }
   .wrap {
-    margin-top: 100px;
+    margin-top: 5rem;
   }
 </style>
 <script>
-  import Navbar from './components/Navbar'
-  import Sidebar from './components/Sidebar'
+  import Tabbar from './components/Tabbar'
   export default{
     components: {
-      Navbar,
-      Sidebar
+      Tabbar
     }
   }
 </script>

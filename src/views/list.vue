@@ -1,11 +1,11 @@
 <template>
-  <div class="hello">
-    <listItem v-for="x in page"></listItem>
+  <div class="cell_container">
+    <Cell v-for="x in page"></Cell>
   </div>
 </template>
 
 <script>
-  import listItem from '../components/listItem'
+  import Cell from '../components/Cell'
   export default {
     data () {
       return {
@@ -13,15 +13,18 @@
       }
     },
     components: {
-      listItem
+      Cell
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  h1 {
-    color: #42b983;
+  .cell_container{
+    border-top: .1rem solid rgba(133, 133, 133, 0.44);
+    border-bottom: .1rem solid rgba(133, 133, 133, 0.44);
+    padding: 0 .8rem;
+    background-color: #fff;
   }
 </style>
 
