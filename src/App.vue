@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <header></header>
     <div class="wrap">
       <router-view></router-view>
     </div>
@@ -11,8 +12,13 @@
   body {
     background-color: #fbf9fe;
   }
-  .wrap {
-    margin-top: 5rem;
+  header{
+    width: 100%;
+    height: 2.8rem;
+    background: rgba(13, 8, 11, 0.62);
+  }
+  .wrap{
+    margin-top: 2rem;
   }
 </style>
 <script>

@@ -1,11 +1,20 @@
 <template>
-  <div class="list">
+  <div v-html="list_item" class="list">
   </div>
 </template>
 
 <script>
   export default {
+    props: {
+      data_props: null
+    },
     ready () {
+
+    },
+    data () {
+      return {
+        list_item: this.data_props
+      }
     },
     methods: {
 
@@ -22,6 +31,7 @@
     padding: .5rem;
     box-sizing:border-box;
     background: #fff;
+    line-height: 2rem;
   }
 </style>
 

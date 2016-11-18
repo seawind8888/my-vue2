@@ -1,7 +1,7 @@
 <template>
   <div id="demo">
     <h1 v-html="msg"></h1>
-    <test v-ref:child :data_props="123321">
+    <test v-ref:child :data_props="abc">
       <testA :data_props="323123"></testA>
     </test>
   </div>
@@ -13,7 +13,8 @@
   export default {
     data () {
       return {
-        msg: 'Hello index!'
+        msg: 'Hello index!',
+        abc: 123321
       }
     },
     components: {
