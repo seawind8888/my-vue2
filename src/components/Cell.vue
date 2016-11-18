@@ -1,20 +1,13 @@
 <template>
-  <div v-html="list_item" class="list">
+  <div v-html="data_props" class="list">
   </div>
 </template>
 
 <script>
   export default {
-    props: {
-      data_props: null
-    },
+    props: ['data_props'],
     ready () {
 
-    },
-    data () {
-      return {
-        list_item: this.data_props
-      }
     },
     methods: {
 

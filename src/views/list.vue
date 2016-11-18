@@ -1,10 +1,6 @@
 <template>
   <div class="cell_container">
-    <ul>
-      <li v-for="x in cell_item">
-        <Cell :data_props="x.list_item"></Cell>
-      </li>
-    </ul>
+    <Cell v-for="x in cell_item" :data_props="x.list_item"></Cell>
   </div>
 </template>
 
@@ -24,14 +20,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  ul{
-    padding: 0;
-    margin: 0;
-  }
-  li{
-    list-style: none;
-  }
-  .cell_container{
+
+  .cell_container {
     border-top: .1rem solid rgba(133, 133, 133, 0.44);
     border-bottom: .1rem solid rgba(133, 133, 133, 0.44);
     padding: 0 .8rem;
