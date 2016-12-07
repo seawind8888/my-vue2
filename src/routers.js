@@ -1,16 +1,31 @@
-export default [{
+const Index = resolve => () => {
+  resolve(require('./views/index.vue'))
+}
+
+const List = resolve => () => {
+  resolve(require('./views/list.vue'))
+}
+
+const Info = resolve => () => {
+  resolve(require('./views/info.vue'))
+}
+
+const routers = [{
   path: '/',
   name: 'index',
-  component: require('./views/index')
+  component: Index
 }, {
   path: '/list',
   name: 'list',
-  component: require('./views/list')
+  component: List
 }, {
   path: '/info',
   name: 'info',
-  component: require('./views/info')
+  component: Info
 }, {
   path: '*',
-  component: require('./views/index')
+  component: Index
 }]
+
+export default routers
+

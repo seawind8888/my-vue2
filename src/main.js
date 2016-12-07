@@ -14,11 +14,12 @@ window.addEventListener('load', () => {
 
 Vue.use(VueRouter)
 Vue.use(VueResource)
-const router = new VueRouter({routes: routerConfig})
+const router = new VueRouter({
+  routerConfig
+})
 /* eslint-disable no-new */
 new Vue({
   router,
   store,
-  el: '#app',
   render: h => h(App)
-})
+}).$mount('#app')
