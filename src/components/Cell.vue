@@ -25,6 +25,8 @@
     box-sizing:border-box;
     background: #fff;
     line-height: 2rem;
+    color:black;
+    text-decoration: none;
   }
 </style>
 
