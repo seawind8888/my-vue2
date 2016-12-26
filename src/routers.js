@@ -1,26 +1,30 @@
-const Index = resolve => () => {
-  resolve(require('./views/index.vue'))
+
+const Index = resolve => {
+  require.ensure(['./views/index.vue'], () => {
+    resolve(require('./views/index.vue'))
+  })
 }
 
-const List = resolve => () => {
-  resolve(require('./views/list.vue'))
+const List = resolve => {
+  require.ensure(['./views/list.vue'], () => {
+    resolve(require('./views/list.vue'))
+  })
 }
 
-const Info = resolve => () => {
-  resolve(require('./views/info.vue'))
+const Info = resolve => {
+  require.ensure(['./views/info.vue'], () => {
+    resolve(require('./views/info.vue'))
+  })
 }
 
 const routers = [{
   path: '/',
-  name: 'index',
   component: Index
 }, {
   path: '/list',
-  name: 'list',
   component: List
 }, {
   path: '/info',
-  name: 'info',
   component: Info
 }, {
   path: '*',

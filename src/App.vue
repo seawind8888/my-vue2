@@ -1,5 +1,11 @@
 <template>
-  <TabBar></TabBar>
+  <div id="app">
+    <header></header>
+    <div class="wrap">
+      <router-view></router-view>
+    </div>
+    <TabBar></TabBar>
+  </div>
 </template>
 
 <script>
