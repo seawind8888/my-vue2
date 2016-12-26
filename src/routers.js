@@ -5,9 +5,9 @@ const Index = resolve => {
   })
 }
 
-const List = resolve => {
-  require.ensure(['./views/list.vue'], () => {
-    resolve(require('./views/list.vue'))
+const Components = resolve => {
+  require.ensure(['./views/components_list.vue'], () => {
+    resolve(require('./views/components_list.vue'))
   })
 }
 
@@ -17,12 +17,44 @@ const Info = resolve => {
   })
 }
 
+const ListIndex = resolve => {
+  require.ensure(['./components/ListIndex.vue'], () => {
+    resolve(require('./components/ListIndex.vue'))
+  })
+}
+
+const Button = resolve => {
+  require.ensure(['./components/Button.vue'], () => {
+    resolve(require('./components/Button.vue'))
+  })
+}
+
+const Alert = resolve => {
+  require.ensure(['./components/Alert.vue'], () => {
+    resolve(require('./components/Alert.vue'))
+  })
+}
+
 const routers = [{
   path: '/',
   component: Index
 }, {
-  path: '/list',
-  component: List
+  path: '/components/:id',
+  component: Components,
+  children: [
+    {
+      path: '/',
+      component: ListIndex
+    },
+    {
+      path: 'button',
+      component: Button
+    },
+    {
+      path: 'alert',
+      component: Alert
+    }
+  ]
 }, {
   path: '/info',
   component: Info

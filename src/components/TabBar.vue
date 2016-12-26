@@ -21,7 +21,7 @@
     data () {
       return {
         Navlist:
-          [{page: '首页', path: '/', class_item: 'home'}, {page: '组件', path: '/list', class_item: 'list'}, {page: '关于', path: '/info', class_item: 'info'}]
+          [{page: '首页', path: '/', class_item: 'home'}, {page: '组件', path: '/components/foo', class_item: 'components'}, {page: '关于', path: '/info', class_item: 'info'}]
       }
     }
   }
